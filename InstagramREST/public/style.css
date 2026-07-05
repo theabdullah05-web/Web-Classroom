@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+}
+h3{
+    padding-left: 30px;
+}
+img{
+    height: 560px;
+    width: auto;
+}
+span{
+    font-weight: 600;
+    padding-right: 8px;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <form action="/action">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter Username" id="username" name="user">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter Password" id="password" name="pass">
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" placeholder="Enter Age" id="age" name="age">
+        </div>
+        <div>
+            <button>Button</button>
+            <button type="submit">Submit Type</button>
+            <button type="button">Button Type</button>
+            <button type="reset">Reset Type</button>
+        </div>
+    </form>
+        <div>
+            <form action="https://www.google.com/search">
+                <label for="google">Search on Google</label>
+                <input type="text" placeholder="Search Here" id="google" name="q">
+                <button>Search</button>
+            </form>
+        </div>
+        <div>
+            <form action="/server">
+                <label for="check">I am 18+</label>
+                <input type="checkbox" id="check" name="check" checked>
+            </form>
+        </div>
+        <div>
+            <form action="/server">
+                <input type="radio" id="mango" name="fruit" value="mango">
+                <label for="mango">Mango</label>
+                <input type="radio" id="apple" name="fruit" value="apple">
+                <label for="apple">Apple</label>
+                <input type="radio" id="banana" name="fruit" value="banana">
+                <label for="banana">Banana</label>
+                <button>Submit</button>
+            </form>
+        </div>
+        <div>
+            <form action="/server">
+                <input type="checkbox" id="mango" name="fruit1" value="mango">
+                <label for="mango">Mango</label>
+                <input type="checkbox" id="apple" name="fruit2" value="apple">
+                <label for="apple">Apple</label>
+                <input type="checkbox" id="banana" name="fruit3">
+                <label for="banana">Banana</label>
+                <button>Submit</button>
+            </form>
+        </div>
+        <div>
+            <form action="/action1">
+               <label for="experience">What is your training experience level?</label>
+                    <select name="experience" id="experience">
+                        <option selected>Select Your Level</option>
+                        <option value="Begin">Beginner</option>
+                        <option value="Inter">Intermediate</option>
+                        <option value="Adv">Advanced</option>
+                    </select>
+                    <button>Submit</button>
+                </form>
+            </div>
+            <div>
+                <form action="/action2">
+                    <label for="Volume">Select Volume</label>
+                    <input type="range" min="0" max="100" id="Volume" name="vol"  step="10" value="30">
+                    <button>Submit</button>
+                </form>
+            </div>
+            <div>
+                <form action="/action3">
+                    <label for="txt">Please give your valuable feedback</label>
+                    <textarea id="txt" name="text" rows="10" cols="100">Fuck You</textarea>
+                    <button>Submit</button>
+                </form>
+            </div>
+</body>
+</html>

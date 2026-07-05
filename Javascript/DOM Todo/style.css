@@ -1,0 +1,14 @@
+.li{
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.btn{
+    margin-left: 5px;
+}
+
+ul{
+    margin-top: 40px;
+}
+h1,form{
+    margin-left: 30px;
+}
