@@ -1,26 +1,30 @@
-class Mammals{
-    constructor(name){
-        this.name= name;
-        this.type="warm-blooded"
-    }
-    eat(){
-        console.log("I am eating")
+class Car{
+    constructor(brand, model,year){
+        this.brand=brand;
+        this.model=model;
+        this.year=year
+    };
+    getInfo(){
+        console.log(`${this.brand} ${this.model} (${this.year})`)
     }
 };
 
-class Dog extends Mammals{
-    constructor(name){
-        super(name);
+class Person{
+    constructor(name,age){
+        this.name=name;
+        this.age=age
     }
-    bark(){
-        console.log("whoo....")
+    introduce(){
+        console.log(`Hi, I'm ${this.name} and I'm ${this.age} years old`)
     }
 };
-class Cat extends Mammals{
-    constructor(name){
-        super(name);
-    }
-    meow(){
-        console.log("meow...")
+
+class Student extends Person{
+    constructor(name,age,course){
+        super(name,age);
+        this.course=course
+    };
+    introduce(){
+        console.log(`Hi, I'm ${this.name} and I'm ${this.age} years old and my course is ${this.course}`)
     }
 }
