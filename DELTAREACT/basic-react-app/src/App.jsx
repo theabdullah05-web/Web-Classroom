@@ -1,13 +1,12 @@
 import './App.css'
+import Button from './Button.jsx';
+import Form from './Form.jsx';
 import ProductTab from './ProductTab.jsx';
 
 function App() {
  return(
-    <div style={{textAlign:"center"}}>
-        <h2>Blockbuster Deals | Shop Now</h2>
-        <ProductTab/>
-    </div>
- ) 
+    <Form/>    
+) 
 }
 
 export default App
