@@ -1,26 +1,33 @@
 const express= require("express");
 const app=express();
-const cookieParser= require("cookie-parser");
-app.use(cookieParser("secretCode"))
+const session=require("express-session");
+app.use(session({
+    secret:"mysupersecretstring",
+    resave:false,
+    saveUninitialized:true
+}))
+
+app.get("/reqcount",(req,res)=>{
+    if(req.session.count){
+        req.session.count++
+    }else{
+        req.session.count=1
+    }
+    res.send(`you sent request ${req.session.count} times`)
+})
+
+app.get("/call",(req,res)=>{
+    let{name="anonymous"}=req.query;
+    req.session.name=name;
+    res.redirect("/hello")
+})
+
+app.get("/hello",(req,res)=>{
+    res.send(`Hello ${req.session.name}`)
+})
 
 app.get("/",(req,res)=>{
-    console.log(req.cookies)
-    res.send("working")
-});
-
-app.get("/getSignedCookies",(req,res)=>{
-    res.cookie("greet","namaste",{signed:true})
-    res.send("sent");
-})
-
-app.get("/verify",(req,res)=>{
-    console.log(req.signedCookies);
-    res.send("check console")
-})
-
-app.get("/cookie",(req,res)=>{
-    res.cookie("operation","dhurandhar")
-    res.send("cookie")
+    res.send("test successful")
 })
 
 app.listen(3000,()=>{
